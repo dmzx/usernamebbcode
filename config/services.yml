@@ -1,0 +1,15 @@
+services:
+    dmzx.username.listener:
+        class: dmzx\username\event\listener
+        arguments:
+            - @auth
+            - @config
+            - @controller.helper
+            - @template
+            - @user
+            - @dbal.conn
+            - %core.root_path%
+            - %core.php_ext%
+            - %core.table_prefix%
+        tags:
+            - { name: event.listener }

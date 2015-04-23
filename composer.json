@@ -1,0 +1,32 @@
+{
+	"name": "dmzx/username",
+	"type": "phpbb-extension",
+	"description": "Username BBCode with Group Colours.",
+	"homepage": "http://www.dmzx-web.net",
+	"version": "0.0.1",
+	"time": "2015-04-23",
+	"keywords": ["phpbb", "extension", "username"],
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "dmzx",
+			"homepage": "http://www.dmzx-web.net",
+			"email": "info@dmzx-web.net",
+			"role": "Extension Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.3.3"
+	},
+	"extra": {
+		"display-name": "Username BBCode",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.1.2,<3.2.*@dev"
+		},
+		"version-check": {
+			"host": "www.phpbb.com",
+			"directory": "/customise/db/extension/username",
+			"filename": "version_check"
+		}
+	}
+}

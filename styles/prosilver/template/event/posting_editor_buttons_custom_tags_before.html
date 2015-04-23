@@ -1,0 +1,18 @@
+<!-- IF not S_PRIVMSGS -->
+		 <select id="hide_username" onchange="username_copy();" style="font-size:11px;" title="Select Username">
+		<option value="#" selected="selected" style="display: none">{L_SELECT_USERNAME}</option>
+		<!-- BEGIN username_bb -->
+		<option value="{username_bb.USERNAME_BB_VALUE}">{username_bb.USERNAME_BB_USER}</option>
+		<!-- END username_bb -->
+		</select>
+
+		<script type="text/javascript">
+		// <![CDATA[
+		function username_copy(){
+		var username_copy = '[username' + $('#hide_username').val() + ']'+ $('#hide_username option:selected').text() + '[/username]';
+		document.forms['postform'].message.value += username_copy;
+		document.forms['postform'].message.focus();
+		return false;}
+		// ]]>
+		</script>
+<!-- ENDIF -->
