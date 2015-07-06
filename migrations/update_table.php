@@ -15,7 +15,7 @@ class update_table extends \phpbb\db\migration\migration
 			array('custom', array(array($this, 'install_bbcode_for_username'))),
 		);
 	}
-	
+
 	public function revert_data()
 	{
 		return array(
@@ -30,7 +30,7 @@ class update_table extends \phpbb\db\migration\migration
 		{
 			include($this->phpbb_root_path . 'includes/acp/acp_bbcodes.' . $this->php_ext);
 		}
-		
+
 		$bbcode_tool = new \acp_bbcodes();
 
 		$bbcode_name = 'username';
@@ -95,7 +95,7 @@ class update_table extends \phpbb\db\migration\migration
 			if ($bbcode_id <= BBCODE_LIMIT)
 			{
 				$bbcode_array['bbcode_id'] = (int) $bbcode_id;
-	
+
 				$this->db->sql_query('INSERT INTO ' . $this->table_prefix . 'bbcodes ' . $this->db->sql_build_array('INSERT', $bbcode_array));
 			}
 		}

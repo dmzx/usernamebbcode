@@ -56,7 +56,7 @@ class listener implements EventSubscriberInterface
 				'USERNAME_BB_VALUE' => '|#' . $row['user_colour'] . '|' . $style_bold . '|'. $row['user_id'],
 				'USERNAME_BB_USER'	=> $row['username']
 				)
-			);		
+			);
 		}
 		$this->db->sql_freeresult($result);
 	}
