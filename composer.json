@@ -3,7 +3,7 @@
 	"type": "phpbb-extension",
 	"description": "Username BBCode with Group Colours.",
 	"homepage": "http://www.dmzx-web.net",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"time": "2015-04-23",
 	"keywords": ["phpbb", "extension", "username"],
 	"license": "GPL-2.0",
